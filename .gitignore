@@ -1,0 +1,19 @@
+﻿.venv/
+__pycache__/
+*.py[cod]
+.env
+*.sqlite
+*.sqlite3
+*.db
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+node_modules/
+.next/
+
+# Local backup files
+*.bak

@@ -1,0 +1,17 @@
+﻿fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+langchain-core
+langchain-openai
+langgraph
+sqlalchemy
+alembic
+httpx
+pytest
+pytest-asyncio
+ruff
+
+pwdlib[argon2]
+PyJWT
