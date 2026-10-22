@@ -32,6 +32,18 @@ Copy-Item .env.example .env
 
 Set a strong, unique JWT_SECRET_KEY in .env before running. Never commit .env or real credentials. The example secret is only a placeholder.
 
+## Frontend dashboard
+
+The React + TypeScript dashboard lives in the frontend directory. Start it in a second PowerShell terminal after the backend is running:
+
+```powershell
+Set-Location frontend
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite. By default, the dashboard connects to http://127.0.0.1:8000. To use another backend, set `VITE_API_URL` in `frontend/.env.local`.
+
 ## Database and backend
 
 ```powershell
