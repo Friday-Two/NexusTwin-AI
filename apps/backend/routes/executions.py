@@ -7,7 +7,12 @@ from sqlalchemy.orm import Session
 from apps.backend.auth_dependencies import get_current_user
 from apps.backend.dependencies import get_db
 from core.execution.runner import execute_accepted_session, verify_execution
-from database.models.entities import ExecutionRecord, NegotiationSession, User, VerificationResult
+from database.models.entities import (
+    ExecutionRecord,
+    NegotiationSession,
+    User,
+    VerificationResult,
+)
 
 router = APIRouter(prefix="/api/v1", tags=["Execution & Verification"])
 
