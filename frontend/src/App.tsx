@@ -50,15 +50,6 @@ export default function App() {
     setServices(await api<Service[]>('/api/v1/services?' + params.toString()));
   }, [api, query, category]);
 
-  const refreshNegotiations = useCallback(async () => {
-    // The API intentionally exposes owned-session lookup rather than a list endpoint.
-    // Sessions created in this browser are kept in state for this dashboard session.
-    if (!activeNegotiation) return;
-    const current = await api<Negotiation>('/api/v1/negotiations/' + activeNegotiation.id);
-    setActiveNegotiation(current);
-    setNegotiations(old => [current, ...old.filter(item => item.id !== current.id)]);
-  }, [api, activeNegotiation]);
-
   useEffect(() => {
     if (!token) return;
     api<User>('/api/v1/users/me').then(setUser).catch(() => {
