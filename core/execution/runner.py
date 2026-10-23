@@ -2,7 +2,13 @@
 import json
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from database.models.entities import ExecutionRecord, NegotiationOffer, NegotiationSession, Service, VerificationResult
+from database.models.entities import (
+    ExecutionRecord,
+    NegotiationOffer,
+    NegotiationSession,
+    Service,
+    VerificationResult,
+)
 
 
 def execute_accepted_session(db: Session, session: NegotiationSession) -> ExecutionRecord:
