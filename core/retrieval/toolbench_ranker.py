@@ -358,6 +358,30 @@ class NeuralAPIRanker:
             )):
                 score -= 0.20
 
+        # Prefer transit-search APIs for transport availability requests.
+        transport_intent = any(term in query_lower for term in (
+            "available transport", "transport between",
+            "find transport", "public transport",
+            "bus between", "train between", "search trips",
+            "available trips", "transport options",
+        ))
+
+        if transport_intent:
+            transit_terms = (
+                "search trips", "search trip", "transit",
+                "public transportation", "bus", "railway",
+                "train", "transportation search",
+            )
+            route_terms = (
+                "directions between 2 locations",
+                "distance matrix", "getdistance",
+            )
+
+            if any(term in text_lower for term in transit_terms):
+                score += 0.25
+
+            if any(term in text_lower for term in route_terms):
+                score -= 0.20
         return float(score)
 
     @torch.inference_mode()
