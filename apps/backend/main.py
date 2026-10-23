@@ -1,10 +1,10 @@
-﻿from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
 from apps.backend.routes.auth import router as auth_router
-from apps.backend.routes.negotiations import router as negotiations_router
 from apps.backend.routes.executions import router as executions_router
+from apps.backend.routes.negotiations import router as negotiations_router
 from apps.backend.routes.preferences import router as preferences_router
 from apps.backend.routes.services import router as services_router
 from apps.backend.routes.users import router as users_router
