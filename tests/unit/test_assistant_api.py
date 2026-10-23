@@ -72,5 +72,5 @@ def test_assistant_requires_authentication_before_calling_model(monkeypatch):
         "apps.backend.routes.assistant.ollama_chat_json",
         fail_if_called,
     )
-    response = TestClient(app).post("/api/v1/assistant/interpret", json={"message": "x"})
+    response = TestClient(app).post("/api/v1/assistant/interpret", json={"message": "Find a hotel"})
     assert response.status_code == 401
