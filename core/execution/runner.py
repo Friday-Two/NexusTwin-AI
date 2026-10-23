@@ -1,7 +1,9 @@
 """Local-only execution simulator and independent verifier."""
 import json
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+
 from database.models.entities import (
     ExecutionRecord,
     NegotiationOffer,
