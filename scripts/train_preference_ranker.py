@@ -12,7 +12,13 @@ import numpy as np
 import pandas as pd
 import torch
 from sentence_transformers import SentenceTransformer
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
+from sklearn.metrics import (
+    accuracy_score,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from sklearn.model_selection import GroupShuffleSplit
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
@@ -153,10 +159,10 @@ def main() -> None:
     predictions = (probabilities >= 0.5).astype(int)
     metrics = {
         "dataset": str(data_path),
-        "dataset_rows": int(len(frame)),
+        "dataset_rows": len(frame),
         "dataset_query_groups": int(frame["query_id"].nunique()),
-        "train_rows": int(len(train_frame)),
-        "test_rows": int(len(test_frame)),
+        "train_rows": len(train_frame),
+        "test_rows": len(test_frame),
         "device": device,
         "encoder": args.encoder,
         "seed": args.seed,
