@@ -64,7 +64,7 @@ def test_assistant_interpret_uses_validated_llm_output(monkeypatch):
         engine.dispose()
 
 
-def test_assistant_rejects_invalid_request_without_calling_model(monkeypatch):
+def test_assistant_requires_authentication_before_calling_model(monkeypatch):
     def fail_if_called(*args, **kwargs):
         raise AssertionError("Model must not be called for invalid input")
 
@@ -73,4 +73,4 @@ def test_assistant_rejects_invalid_request_without_calling_model(monkeypatch):
         fail_if_called,
     )
     response = TestClient(app).post("/api/v1/assistant/interpret", json={"message": "x"})
-    assert response.status_code == 422
+    assert response.status_code == 401
