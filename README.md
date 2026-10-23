@@ -32,6 +32,22 @@ Copy-Item .env.example .env
 
 Set a strong, unique JWT_SECRET_KEY in .env before running. Never commit .env or real credentials. The example secret is only a placeholder.
 
+## Local LLM and deep learning training
+
+See [LLM and DL training guide](docs/LLM_AND_DL_TRAINING.md) for local Ollama setup, the dashboard LLM test, and the Google Colab training pipeline. The starter ranking data is synthetic and is not a benchmark result.
+
+## Frontend dashboard
+
+Run the React dashboard in a second terminal:
+
+```powershell
+Set-Location frontend
+npm install
+npm run dev
+```
+
+Open the Vite URL, usually http://127.0.0.1:5173. The backend must be running on port 8000.
+
 ## Database and backend
 
 ```powershell
