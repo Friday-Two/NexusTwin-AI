@@ -1,0 +1,57 @@
+﻿query,neural_weight,metadata_weight,Recall@5,MRR@10,NDCG@10,Relevant_found@20
+Find hotels in Hyderabad under 3000 rupees per night,0.6,0.4,0.6,1.0,0.843537875344446,4
+Find hotels in Hyderabad under 3000 rupees per night,0.7,0.30000000000000004,0.6,1.0,0.8122682216087223,4
+Find hotels in Hyderabad under 3000 rupees per night,0.8,0.19999999999999996,0.6,1.0,0.8062079522181139,4
+Find hotels in Hyderabad under 3000 rupees per night,0.9,0.09999999999999998,0.4,1.0,0.7622369974983191,4
+Find accommodation with available rooms and prices,0.6,0.4,0.5714285714285714,1.0,0.89366331896977,7
+Find accommodation with available rooms and prices,0.7,0.30000000000000004,0.7142857142857143,1.0,0.9083745556952362,7
+Find accommodation with available rooms and prices,0.8,0.19999999999999996,0.7142857142857143,1.0,0.9083745556952362,7
+Find accommodation with available rooms and prices,0.9,0.09999999999999998,0.7142857142857143,1.0,0.8899187097780359,7
+Get details about a specific hotel,0.6,0.4,0.7142857142857143,1.0,0.9848330959553521,7
+Get details about a specific hotel,0.7,0.30000000000000004,0.7142857142857143,1.0,0.9911205770005562,7
+Get details about a specific hotel,0.8,0.19999999999999996,0.7142857142857143,1.0,0.9878316351280035,7
+Get details about a specific hotel,0.9,0.09999999999999998,0.7142857142857143,1.0,0.9878316351280035,7
+Search for flights from Hyderabad to Delhi,0.6,0.4,1.0,1.0,1.0,5
+Search for flights from Hyderabad to Delhi,0.7,0.30000000000000004,1.0,1.0,1.0,5
+Search for flights from Hyderabad to Delhi,0.8,0.19999999999999996,1.0,1.0,1.0,5
+Search for flights from Hyderabad to Delhi,0.9,0.09999999999999998,0.8,1.0,0.9896062251871525,5
+Compare flight fares between two cities,0.6,0.4,0.5,1.0,0.9058653015743079,4
+Compare flight fares between two cities,0.7,0.30000000000000004,0.5,1.0,0.9058653015743079,4
+Compare flight fares between two cities,0.8,0.19999999999999996,0.5,1.0,0.9058653015743079,4
+Compare flight fares between two cities,0.9,0.09999999999999998,0.5,1.0,0.9058653015743079,4
+Find flights when the destination is flexible,0.6,0.4,1.0,1.0,0.9674679834891693,3
+Find flights when the destination is flexible,0.7,0.30000000000000004,1.0,1.0,0.9674679834891693,3
+Find flights when the destination is flexible,0.8,0.19999999999999996,1.0,1.0,0.9674679834891693,3
+Find flights when the destination is flexible,0.9,0.09999999999999998,1.0,1.0,1.0,3
+Find restaurants in a given city,0.6,0.4,0.6666666666666666,1.0,0.6508205185601091,2
+Find restaurants in a given city,0.7,0.30000000000000004,0.6666666666666666,1.0,0.6508205185601091,2
+Find restaurants in a given city,0.8,0.19999999999999996,0.6666666666666666,1.0,0.6713860725233041,3
+Find restaurants in a given city,0.9,0.09999999999999998,0.6666666666666666,1.0,0.6713860725233041,3
+Find restaurants with cuisine and price filters,0.6,0.4,1.0,1.0,1.0,1
+Find restaurants with cuisine and price filters,0.7,0.30000000000000004,1.0,1.0,1.0,1
+Find restaurants with cuisine and price filters,0.8,0.19999999999999996,1.0,1.0,1.0,1
+Find restaurants with cuisine and price filters,0.9,0.09999999999999998,1.0,1.0,1.0,1
+Get reviews for a specific restaurant,0.6,0.4,1.0,1.0,1.0,2
+Get reviews for a specific restaurant,0.7,0.30000000000000004,1.0,1.0,1.0,2
+Get reviews for a specific restaurant,0.8,0.19999999999999996,1.0,1.0,1.0,2
+Get reviews for a specific restaurant,0.9,0.09999999999999998,1.0,1.0,1.0,2
+Search for products by name,0.6,0.4,0.625,1.0,0.8219345592466819,7
+Search for products by name,0.7,0.30000000000000004,0.625,1.0,0.8219345592466819,7
+Search for products by name,0.8,0.19999999999999996,0.625,1.0,0.8219345592466819,7
+Search for products by name,0.9,0.09999999999999998,0.625,1.0,0.8219345592466819,7
+Find products and compare their prices,0.6,0.4,0.16666666666666666,1.0,0.30260241349881345,4
+Find products and compare their prices,0.7,0.30000000000000004,0.16666666666666666,1.0,0.30260241349881345,4
+Find products and compare their prices,0.8,0.19999999999999996,0.16666666666666666,1.0,0.30260241349881345,3
+Find products and compare their prices,0.9,0.09999999999999998,0.16666666666666666,1.0,0.30260241349881345,3
+Track a shipment using its tracking number,0.6,0.4,1.0,1.0,1.0,5
+Track a shipment using its tracking number,0.7,0.30000000000000004,1.0,1.0,1.0,5
+Track a shipment using its tracking number,0.8,0.19999999999999996,1.0,1.0,1.0,5
+Track a shipment using its tracking number,0.9,0.09999999999999998,1.0,1.0,1.0,5
+Find nearby places using geographic coordinates,0.6,0.4,0.16666666666666666,1.0,0.4034698846650846,5
+Find nearby places using geographic coordinates,0.7,0.30000000000000004,0.16666666666666666,1.0,0.4034698846650846,5
+Find nearby places using geographic coordinates,0.8,0.19999999999999996,0.16666666666666666,1.0,0.4034698846650846,5
+Find nearby places using geographic coordinates,0.9,0.09999999999999998,0.16666666666666666,1.0,0.4978632821247326,5
+Find available transport between two locations,0.6,0.4,0.2,1.0,0.4371994911049732,4
+Find available transport between two locations,0.7,0.30000000000000004,0.2,1.0,0.4371994911049732,4
+Find available transport between two locations,0.8,0.19999999999999996,0.2,0.25,0.3511007680413272,4
+Find available transport between two locations,0.9,0.09999999999999998,0.4,0.3333333333333333,0.30078518014914984,3

@@ -1,0 +1,31 @@
+﻿query,method,labelled_candidates_returned,relevant_total,relevant_in_top5,recall_at_5,mrr_at_10,ndcg_at_10
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,7,5,4,0.8,1.0,1.0
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first,4,5,2,0.4,1.0,0.8772153153380493
+Find accommodation with available rooms and prices,Hybrid,8,7,5,0.7142857142857143,1.0,1.0
+Find accommodation with available rooms and prices,Neural-first,6,7,4,0.5714285714285714,0.5,0.7816510974258781
+Get details about a specific hotel,Hybrid,10,7,5,0.7142857142857143,1.0,0.9878316351280036
+Get details about a specific hotel,Neural-first,6,7,5,0.7142857142857143,1.0,1.0
+Search for flights from Hyderabad to Delhi,Hybrid,10,5,5,1.0,1.0,1.0
+Search for flights from Hyderabad to Delhi,Neural-first,5,5,3,0.6,1.0,0.9674679834891693
+Compare flight fares between two cities,Hybrid,10,4,2,0.5,1.0,0.9058653015743079
+Compare flight fares between two cities,Neural-first,5,4,2,0.5,1.0,1.0
+Find flights when the destination is flexible,Hybrid,10,3,3,1.0,1.0,0.9674679834891693
+Find flights when the destination is flexible,Neural-first,7,3,2,0.6666666666666666,1.0,0.86034433104172
+Find restaurants in a given city,Hybrid,8,3,2,0.6666666666666666,1.0,0.8519590445170673
+Find restaurants in a given city,Neural-first,6,3,3,1.0,1.0,0.9060254355346823
+Find restaurants with cuisine and price filters,Hybrid,4,1,1,1.0,1.0,1.0
+Find restaurants with cuisine and price filters,Neural-first,5,1,1,1.0,1.0,1.0
+Get reviews for a specific restaurant,Hybrid,10,2,2,1.0,1.0,1.0
+Get reviews for a specific restaurant,Neural-first,3,2,2,1.0,1.0,1.0
+Search for products by name,Hybrid,9,8,5,0.625,1.0,0.9888009031441519
+Search for products by name,Neural-first,3,8,2,0.25,0.5,0.6934264036172708
+Find products and compare their prices,Hybrid,7,6,2,0.3333333333333333,1.0,0.8385465274895063
+Find products and compare their prices,Neural-first,2,6,1,0.16666666666666666,1.0,1.0
+Track a shipment using its tracking number,Hybrid,10,5,5,1.0,1.0,1.0
+Track a shipment using its tracking number,Neural-first,8,5,5,1.0,1.0,1.0
+Find nearby places using geographic coordinates,Hybrid,8,6,3,0.5,1.0,0.8364801667538002
+Find nearby places using geographic coordinates,Neural-first,5,6,4,0.6666666666666666,1.0,0.9047172294870751
+Search for rental cars in a city,Hybrid,5,0,0,,0.0,0.0
+Search for rental cars in a city,Neural-first,5,0,0,,0.0,0.0
+Find available transport between two locations,Hybrid,7,5,3,0.6,0.3333333333333333,0.6533933590057491
+Find available transport between two locations,Neural-first,3,5,2,0.4,1.0,1.0

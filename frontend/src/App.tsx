@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+﻿import { useCallback, useEffect, useMemo, useState } from 'react';
 
 type User = { id: number; email: string; display_name: string };
 type Service = { id: number; name: string; category: string; description: string; relevance_score: number };
@@ -7,6 +7,8 @@ type Negotiation = { id: number; service_id: number; status: string; budget_limi
 type Execution = { id: number; session_id: number; status: string; result_details: string };
 type Verification = { id: number; execution_id: number; verified: boolean; details: string };
 type IntentPlan = { intent: string; category: string; constraints: string[]; missing_information: string[]; summary: string };
+type RetrievedAPI = { document_id: string; description: string; api_text: string; ranking_score: number };
+type RetrievalResponse = { query: string; results: RetrievedAPI[] };
 
 const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
@@ -31,6 +33,10 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [intentMessage, setIntentMessage] = useState('Find affordable accommodation near the airport');
   const [intentPlan, setIntentPlan] = useState<IntentPlan | null>(null);
+  const [retrievalQuery, setRetrievalQuery] = useState('Find rental cars in a city');
+  const [retrievalResults, setRetrievalResults] = useState<RetrievedAPI[]>([]);
+  const [retrievalBusy, setRetrievalBusy] = useState(false);
+  const [retrievalSearched, setRetrievalSearched] = useState(false);
 
   const api = useCallback(async <T,>(path: string, init: RequestInit = {}): Promise<T> => {
     const response = await fetch(API + path, {
@@ -90,6 +96,31 @@ export default function App() {
   function signOut() {
     localStorage.removeItem('nexustwin_token'); setToken(''); setUser(null);
     setServices([]); setNegotiations([]); setActiveNegotiation(null); setExecution(null); setVerification(null);
+  }
+
+  async function rankAPIs(event: React.FormEvent) {
+    event.preventDefault();
+    setRetrievalBusy(true);
+    setMessage('');
+    try {
+      const result = await api<RetrievalResponse>('/api/v1/retrieval/rank', {
+        method: 'POST',
+        body: JSON.stringify({ query: retrievalQuery.trim(), top_k: 5 }),
+      });
+      setRetrievalResults(result.results);
+      setRetrievalSearched(true);
+      setMessage(
+        result.results.length > 0
+          ? `Ranked ${result.results.length} API candidates.`
+          : 'No suitable API found in the current corpus.'
+      );
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'API retrieval failed.');
+      setRetrievalResults([]);
+      setRetrievalSearched(false);
+    } finally {
+      setRetrievalBusy(false);
+    }
   }
 
   async function discover() {
@@ -172,7 +203,7 @@ export default function App() {
   if (!token || !user) {
     return <main className="auth-shell">
       <section className="auth-panel">
-        <div className="brand-mark">N<span>✳</span></div>
+        <div className="brand-mark">N<span>✶</span></div>
         <p className="eyebrow">YOUR PERSONAL AI SYSTEM</p>
         <h1>Make decisions.<br /><em>With a twin.</em></h1>
         <p className="muted">A preference-aware digital twin to discover services, compare agent offers, and verify every simulated action.</p>
@@ -189,16 +220,16 @@ export default function App() {
         {message && <p className="notice">{message}</p>}
         <p className="fine-print">API: {API} · No real-world transactions are performed.</p>
       </section>
-      <aside className="auth-art"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit-core">N<span>✳</span></div><div className="art-copy"><span className="pill">PERSONAL DIGITAL TWIN</span><h2>Your intent.<br />Your boundaries.<br /><em>Your decision.</em></h2><p>Multiple agents. One clear outcome.</p></div><span className="art-index">01 / AUTONOMY WITH OVERSIGHT</span></aside>
+      <aside className="auth-art"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit-core">N<span>✶</span></div><div className="art-copy"><span className="pill">PERSONAL DIGITAL TWIN</span><h2>Your intent.<br />Your boundaries.<br /><em>Your decision.</em></h2><p>Multiple agents. One clear outcome.</p></div><span className="art-index">01 / AUTONOMY WITH OVERSIGHT</span></aside>
     </main>;
   }
 
   return <div className="app-shell">
     <aside className="sidebar">
-      <div className="brand"><div className="brand-small">N<span>✳</span></div><div><strong>NexusTwin</strong><small>PERSONAL AI</small></div></div>
+      <div className="brand"><div className="brand-small">N<span>✶</span></div><div><strong>NexusTwin</strong><small>PERSONAL AI</small></div></div>
       <div className="nav-label">WORKSPACE</div>
       <a className="nav-item selected" href="#overview">◈ <span>Overview</span></a>
-      <a className="nav-item" href="#ai-intent">✳ <span>AI intent</span></a><a className="nav-item" href="#discover">⌕ <span>Discover services</span></a>
+      <a className="nav-item" href="#ai-intent">✶ <span>AI intent</span></a><a className="nav-item" href="#discover">⌕ <span>Discover services</span></a>
       <a className="nav-item" href="#negotiation">⇄ <span>Negotiation lab</span></a>
       <a className="nav-item" href="#preferences">◎ <span>Twin preferences</span></a>
       <div className="sidebar-bottom"><div className="privacy-card"><span className="status-dot" /> <strong>Privacy guard active</strong><p>Sensitive preferences are excluded from ranking by default.</p></div><div className="user-chip"><div className="avatar">{user.display_name.slice(0, 1).toUpperCase()}</div><div className="user-info"><strong>{user.display_name}</strong><small>{user.email}</small></div><button className="icon-button" title="Sign out" onClick={signOut}>↗</button></div></div>
@@ -206,13 +237,80 @@ export default function App() {
     <main className="main-content">
       <header className="topbar"><div><span className="breadcrumb">Workspace</span><span className="slash"> / </span><strong>Overview</strong></div><div className="top-right"><span className="live-dot" /> SYSTEM ONLINE <span className="top-divider" /> <span className="user-initial">{user.display_name.slice(0, 1).toUpperCase()}</span></div></header>
       <section id="overview" className="welcome"><div><p className="eyebrow">THURSDAY · YOUR DIGITAL TWIN IS READY</p><h1>Good to have you here, <em>{user.display_name.split(' ')[0]}.</em></h1><p className="muted">Your preferences shape the search. You stay in control of every decision.</p></div><div className="twin-badge"><span className="pulse" /> TWIN ACTIVE <small>Personal context loaded</small></div></section>
-      {message && <div className="toast" role="status"><span>✳</span>{message}<button onClick={() => setMessage('')} aria-label="Dismiss">×</button></div>}
+      {message && <div className="toast" role="status"><span>✶</span>{message}<button onClick={() => setMessage('')} aria-label="Dismiss">×</button></div>}
       <section className="stat-grid">
         <div className="stat-card"><div className="stat-top"><span>AVAILABLE SERVICES</span><span className="stat-icon">⌕</span></div><strong>{stats.services.toString().padStart(2, '0')}</strong><small>Matching current search</small></div>
         <div className="stat-card"><div className="stat-top"><span>NEGOTIATIONS</span><span className="stat-icon">⇄</span></div><strong>{stats.negotiations.toString().padStart(2, '0')}</strong><small>Started this session</small></div>
         <div className="stat-card"><div className="stat-top"><span>ACCEPTED OFFERS</span><span className="stat-icon">✓</span></div><strong>{stats.accepted.toString().padStart(2, '0')}</strong><small>Awaiting or completed simulation</small></div>
       </section>
       <section id="ai-intent" className="section-card"><div className="section-heading"><div><p className="eyebrow">00 / LOCAL LLM REASONING</p><h2>Talk to your digital twin</h2><p className="muted">Interpret your request with Ollama running locally. This does not execute bookings or payments.</p></div><span className="count-tag">OLLAMA · LOCAL</span></div><form className="intent-form" onSubmit={interpretIntent}><label>Your request<textarea value={intentMessage} onChange={e => setIntentMessage(e.target.value)} required minLength={3} maxLength={4000} rows={3} placeholder="Describe what you need in plain English…" /></label><button className="primary compact" disabled={busy}>Interpret with LLM ↗</button></form>{intentPlan && <div className="intent-result"><div><small>DETECTED INTENT</small><strong>{intentPlan.intent}</strong></div><div><small>CATEGORY</small><strong>{intentPlan.category}</strong></div><div><small>SUMMARY</small><p>{intentPlan.summary}</p></div><div><small>CONSTRAINTS</small><p>{intentPlan.constraints.length ? intentPlan.constraints.join(' · ') : 'None extracted'}</p></div><div><small>MISSING INFORMATION</small><p>{intentPlan.missing_information.length ? intentPlan.missing_information.join(' · ') : 'No essential details flagged'}</p></div></div>}</section>
+      <section id="api-discovery" className="section-card">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / TRAINED MODEL RETRIEVAL</p>
+            <h2>AI API Discovery</h2>
+            <p className="muted">Search API documentation using your trained neural ranker and metadata signals.</p>
+          </div>
+          <span className="count-tag">MODEL POWERED</span>
+        </div>
+
+        <form className="intent-form" onSubmit={rankAPIs}>
+          <label>
+            What capability do you need?
+            <textarea
+              value={retrievalQuery}
+              onChange={e => setRetrievalQuery(e.target.value)}
+              required
+              minLength={3}
+              maxLength={4000}
+              rows={2}
+              placeholder="Example: Find rental cars available in a city"
+            />
+          </label>
+          <button className="primary compact" disabled={retrievalBusy || !retrievalQuery.trim()}>
+            {retrievalBusy ? 'Ranking APIs...' : 'Find matching APIs ↗'}
+          </button>
+        </form>
+
+        <div className="service-list">
+          {retrievalResults.map((item, index) => (
+            <article className="service-row" key={item.document_id}>
+              <div className="service-symbol">{String(index + 1).padStart(2, '0')}</div>
+              <div className="service-copy">
+                <div className="service-title">{item.description || 'API documentation'}</div>
+                <p>{item.api_text || 'No API details available.'}</p>
+                <small>Document ID: {item.document_id}</small>
+              </div>
+              <div className="relevance">
+                <small>RANKING SCORE</small>
+                <strong>{item.ranking_score.toFixed(4)}</strong>
+              </div>
+            </article>
+          ))}
+
+          {retrievalResults.length === 0 && (
+            <div className="empty">
+              <span>⌕</span>
+              <strong>
+                {retrievalSearched
+                  ? 'No suitable API found'
+                  : 'No API candidates yet'}
+              </strong>
+              <p>
+                {retrievalSearched
+                  ? 'The current API corpus has no verified match for this request. Try another query or add documentation for a compatible API.'
+                  : 'Enter a capability above to retrieve API candidates.'}
+              </p>
+            </div>
+          )}
+        </div>
+
+        <p className="fine-print">
+          Scores are ranking signals, not probabilities. Retrieved documentation is not
+          proof that an API is available, compatible, or safe to execute. Execution remains
+          a separate, explicitly controlled simulation.
+        </p>
+      </section>
       <section id="discover" className="section-card"><div className="section-heading"><div><p className="eyebrow">01 / SERVICE INTELLIGENCE</p><h2>Discover services</h2><p className="muted">Explore active services ranked against non-sensitive preferences.</p></div><span className="count-tag">{services.length} RESULTS</span></div>
         <div className="search-row"><div className="search-input"><span>⌕</span><input value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => e.key === 'Enter' && discover()} placeholder="Search services, categories, keywords…" /></div><select value={category} onChange={e => setCategory(e.target.value)}><option value="">All categories</option><option>Accommodation</option><option>Travel</option><option>Shopping</option><option>Transport</option><option>Food</option></select><button className="primary compact" disabled={busy} onClick={discover}>Search ↗</button></div>
         <div className="service-list">{services.map(service => <article className="service-row" key={service.id}><div className="service-symbol">{service.category.toLowerCase().includes('travel') ? '✈' : service.category.toLowerCase().includes('accommodation') ? '⌂' : '◇'}</div><div className="service-copy"><div className="service-title">{service.name}<span className="category-tag">{service.category}</span></div><p>{service.description || 'No description provided.'}</p></div><div className="relevance"><small>RELEVANCE</small><strong>{Math.round(service.relevance_score * 100)}%</strong><div className="meter"><span style={{ width: Math.round(service.relevance_score * 100) + '%' }} /></div></div><button className="outline compact" disabled={busy} onClick={() => startNegotiation(service)}>Compare offers ↗</button></article>)}

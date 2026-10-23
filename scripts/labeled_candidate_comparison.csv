@@ -1,0 +1,31 @@
+﻿query,method,labelled_candidates_returned,relevant_total,recall_at_5,mrr_at_10,ndcg_at_10
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only,4,5,1.0,0.5,0.6509209298071326
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,10,5,0.6,1.0,0.9221235176732561
+Find accommodation with available rooms and prices,Neural-only,3,7,1.0,0.5,0.6934264036172708
+Find accommodation with available rooms and prices,Hybrid,10,7,0.5714285714285714,1.0,0.9643632283499571
+Get details about a specific hotel,Neural-only,5,7,1.0,1.0,1.0
+Get details about a specific hotel,Hybrid,10,7,0.7142857142857143,1.0,0.9878316351280036
+Search for flights from Hyderabad to Delhi,Neural-only,4,5,1.0,1.0,1.0
+Search for flights from Hyderabad to Delhi,Hybrid,10,5,0.6,1.0,0.9565912771023181
+Compare flight fares between two cities,Neural-only,3,4,1.0,1.0,1.0
+Compare flight fares between two cities,Hybrid,10,4,0.5,1.0,0.9058653015743079
+Find flights when the destination is flexible,Neural-only,4,3,1.0,1.0,1.0
+Find flights when the destination is flexible,Hybrid,10,3,1.0,1.0,1.0
+Find restaurants in a given city,Neural-only,5,3,1.0,1.0,0.9060254355346823
+Find restaurants in a given city,Hybrid,10,3,0.3333333333333333,1.0,0.7777061538487877
+Find restaurants with cuisine and price filters,Neural-only,5,1,1.0,1.0,1.0
+Find restaurants with cuisine and price filters,Hybrid,10,1,1.0,1.0,1.0
+Get reviews for a specific restaurant,Neural-only,3,2,1.0,1.0,1.0
+Get reviews for a specific restaurant,Hybrid,10,2,1.0,1.0,1.0
+Search for products by name,Neural-only,1,8,,0.0,0.0
+Search for products by name,Hybrid,10,8,0.375,0.5,0.798465881758476
+Find products and compare their prices,Neural-only,2,6,1.0,1.0,1.0
+Find products and compare their prices,Hybrid,9,6,0.4,1.0,0.8891085695884217
+Track a shipment using its tracking number,Neural-only,7,5,1.0,1.0,1.0
+Track a shipment using its tracking number,Hybrid,10,5,1.0,1.0,1.0
+Find nearby places using geographic coordinates,Neural-only,5,6,1.0,1.0,0.9558295932317544
+Find nearby places using geographic coordinates,Hybrid,10,6,0.5,1.0,0.8541058313273973
+Search for rental cars in a city,Neural-only,5,0,,0.0,0.0
+Search for rental cars in a city,Hybrid,8,0,,0.0,0.0
+Find available transport between two locations,Neural-only,3,5,1.0,1.0,1.0
+Find available transport between two locations,Hybrid,10,5,0.8,1.0,0.9560290452802053

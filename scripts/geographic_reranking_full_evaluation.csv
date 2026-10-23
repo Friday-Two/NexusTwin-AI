@@ -1,0 +1,29 @@
+﻿query,method,relevant_label_count,Recall@5,MRR@10,NDCG@10,Relevant found@20
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,5,0.6,1.0,0.8062079522181139,4
+Find hotels in Hyderabad under 3000 rupees per night,Geographic reranking,5,0.6,1.0,0.8062079522181139,4
+Find accommodation with available rooms and prices,Hybrid,7,0.7142857142857143,1.0,0.9083745556952362,7
+Find accommodation with available rooms and prices,Geographic reranking,7,0.7142857142857143,1.0,0.9083745556952362,7
+Get details about a specific hotel,Hybrid,7,0.7142857142857143,1.0,0.9878316351280035,7
+Get details about a specific hotel,Geographic reranking,7,0.7142857142857143,1.0,0.9878316351280035,7
+Search for flights from Hyderabad to Delhi,Hybrid,5,1.0,1.0,1.0,5
+Search for flights from Hyderabad to Delhi,Geographic reranking,5,1.0,1.0,1.0,5
+Compare flight fares between two cities,Hybrid,4,0.5,1.0,0.9058653015743079,4
+Compare flight fares between two cities,Geographic reranking,4,0.5,1.0,0.9058653015743079,4
+Find flights when the destination is flexible,Hybrid,3,1.0,1.0,0.9674679834891693,3
+Find flights when the destination is flexible,Geographic reranking,3,1.0,1.0,0.9674679834891693,3
+Find restaurants in a given city,Hybrid,3,0.6666666666666666,1.0,0.6713860725233041,3
+Find restaurants in a given city,Geographic reranking,3,0.6666666666666666,1.0,0.6713860725233041,3
+Find restaurants with cuisine and price filters,Hybrid,1,1.0,1.0,1.0,1
+Find restaurants with cuisine and price filters,Geographic reranking,1,1.0,1.0,1.0,1
+Get reviews for a specific restaurant,Hybrid,2,1.0,1.0,1.0,2
+Get reviews for a specific restaurant,Geographic reranking,2,1.0,1.0,1.0,2
+Search for products by name,Hybrid,8,0.625,1.0,0.8219345592466819,7
+Search for products by name,Geographic reranking,8,0.625,1.0,0.8219345592466819,7
+Find products and compare their prices,Hybrid,6,0.16666666666666666,1.0,0.30260241349881345,3
+Find products and compare their prices,Geographic reranking,6,0.16666666666666666,1.0,0.30260241349881345,3
+Track a shipment using its tracking number,Hybrid,5,1.0,1.0,1.0,5
+Track a shipment using its tracking number,Geographic reranking,5,1.0,1.0,1.0,5
+Find nearby places using geographic coordinates,Hybrid,6,0.16666666666666666,1.0,0.4034698846650846,5
+Find nearby places using geographic coordinates,Geographic reranking,6,0.6666666666666666,1.0,0.7967504123860216,5
+Find available transport between two locations,Hybrid,5,0.2,0.25,0.3511007680413272,4
+Find available transport between two locations,Geographic reranking,5,0.2,0.25,0.3511007680413272,4

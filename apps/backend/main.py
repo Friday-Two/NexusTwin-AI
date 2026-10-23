@@ -1,4 +1,4 @@
-from contextlib import asynccontextmanager
+﻿from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,6 +10,7 @@ from apps.backend.routes.negotiations import router as negotiations_router
 from apps.backend.routes.preferences import router as preferences_router
 from apps.backend.routes.services import router as services_router
 from apps.backend.routes.users import router as users_router
+from apps.backend.routes.retrieval import router as retrieval_router
 from database.connection import init_db
 
 
@@ -41,7 +42,7 @@ app.include_router(preferences_router)
 app.include_router(services_router)
 app.include_router(negotiations_router)
 app.include_router(executions_router)
-
+app.include_router(retrieval_router)
 
 @app.get("/")
 def root():

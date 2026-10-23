@@ -1,0 +1,43 @@
+﻿query,method,Recall@5,MRR@10,NDCG@10,Relevant_found@20,Relevant_total
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,0.6,1.0,0.8062079522181139,4,5
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first,0.2,0.3333333333333333,0.16958010263680806,2,5
+Find hotels in Hyderabad under 3000 rupees per night,Global shortlist,0.4,1.0,0.6661998717660157,3,5
+Find accommodation with available rooms and prices,Hybrid,0.7142857142857143,1.0,0.9083745556952362,7,7
+Find accommodation with available rooms and prices,Neural-first,0.0,0.14285714285714285,0.09162544430476362,5,7
+Find accommodation with available rooms and prices,Global shortlist,0.7142857142857143,1.0,0.9083745556952362,7,7
+Get details about a specific hotel,Hybrid,0.7142857142857143,1.0,0.9878316351280035,7,7
+Get details about a specific hotel,Neural-first,0.5714285714285714,1.0,0.6730234638881231,5,7
+Get details about a specific hotel,Global shortlist,0.7142857142857143,1.0,0.9878316351280035,7,7
+Search for flights from Hyderabad to Delhi,Hybrid,1.0,1.0,1.0,5,5
+Search for flights from Hyderabad to Delhi,Neural-first,0.4,0.25,0.27727342735504823,3,5
+Search for flights from Hyderabad to Delhi,Global shortlist,1.0,1.0,1.0,5,5
+Compare flight fares between two cities,Hybrid,0.5,1.0,0.9058653015743079,4,4
+Compare flight fares between two cities,Neural-first,0.25,0.5,0.369453583111095,2,4
+Compare flight fares between two cities,Global shortlist,0.5,1.0,0.9058653015743079,4,4
+Find flights when the destination is flexible,Hybrid,1.0,1.0,0.9674679834891693,3,3
+Find flights when the destination is flexible,Neural-first,0.3333333333333333,1.0,0.6364391809889587,3,3
+Find flights when the destination is flexible,Global shortlist,1.0,1.0,0.9674679834891693,3,3
+Find restaurants in a given city,Hybrid,0.6666666666666666,1.0,0.6713860725233041,3,3
+Find restaurants in a given city,Neural-first,0.6666666666666666,1.0,0.86034433104172,3,3
+Find restaurants in a given city,Global shortlist,0.6666666666666666,1.0,0.6713860725233041,3,3
+Find restaurants with cuisine and price filters,Hybrid,1.0,1.0,1.0,1,1
+Find restaurants with cuisine and price filters,Neural-first,1.0,0.3333333333333333,0.5,1,1
+Find restaurants with cuisine and price filters,Global shortlist,1.0,1.0,1.0,1,1
+Get reviews for a specific restaurant,Hybrid,1.0,1.0,1.0,2,2
+Get reviews for a specific restaurant,Neural-first,1.0,1.0,1.0,2,2
+Get reviews for a specific restaurant,Global shortlist,1.0,1.0,1.0,2,2
+Search for products by name,Hybrid,0.625,1.0,0.8219345592466819,7,8
+Search for products by name,Neural-first,0.0,0.07692307692307693,0.0,2,8
+Search for products by name,Global shortlist,0.625,1.0,0.8219345592466819,7,8
+Find products and compare their prices,Hybrid,0.16666666666666666,1.0,0.30260241349881345,3,6
+Find products and compare their prices,Neural-first,0.0,0.14285714285714285,0.10086747116627115,1,6
+Find products and compare their prices,Global shortlist,0.16666666666666666,1.0,0.30260241349881345,3,6
+Track a shipment using its tracking number,Hybrid,1.0,1.0,1.0,5,5
+Track a shipment using its tracking number,Neural-first,0.8,1.0,0.9068250379649666,5,5
+Track a shipment using its tracking number,Global shortlist,1.0,1.0,1.0,5,5
+Find nearby places using geographic coordinates,Hybrid,0.16666666666666666,1.0,0.4034698846650846,5,6
+Find nearby places using geographic coordinates,Neural-first,0.3333333333333333,1.0,0.5071367207381852,4,6
+Find nearby places using geographic coordinates,Global shortlist,0.16666666666666666,1.0,0.4034698846650846,5,6
+Find available transport between two locations,Hybrid,0.2,0.25,0.3511007680413272,4,5
+Find available transport between two locations,Neural-first,0.2,1.0,0.4599715079731103,2,5
+Find available transport between two locations,Global shortlist,0.0,0.14285714285714285,0.21515079688078367,3,5

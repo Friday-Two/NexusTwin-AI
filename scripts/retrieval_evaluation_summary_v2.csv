@@ -1,0 +1,3 @@
+,Recall@5,MRR@10,NDCG@10,Queries without positives
+Neural-only,1.0,0.8,0.813746824146056,1.0
+Hybrid,0.6710034013605443,0.9,0.8674793627754087,1.0

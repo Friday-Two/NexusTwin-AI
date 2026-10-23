@@ -1,0 +1,57 @@
+﻿query,method,cutoff,relevant_found,relevant_total,coverage
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only top 20,20,2,5,0.4
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only top 100 coverage,100,4,5,0.8
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid top 20,20,4,5,0.8
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first top 20,20,2,5,0.4
+Find accommodation with available rooms and prices,Neural-only top 20,20,2,7,0.2857142857142857
+Find accommodation with available rooms and prices,Neural-only top 100 coverage,100,5,7,0.7142857142857143
+Find accommodation with available rooms and prices,Hybrid top 20,20,7,7,1.0
+Find accommodation with available rooms and prices,Neural-first top 20,20,5,7,0.7142857142857143
+Get details about a specific hotel,Neural-only top 20,20,4,7,0.5714285714285714
+Get details about a specific hotel,Neural-only top 100 coverage,100,7,7,1.0
+Get details about a specific hotel,Hybrid top 20,20,7,7,1.0
+Get details about a specific hotel,Neural-first top 20,20,5,7,0.7142857142857143
+Search for flights from Hyderabad to Delhi,Neural-only top 20,20,2,5,0.4
+Search for flights from Hyderabad to Delhi,Neural-only top 100 coverage,100,5,5,1.0
+Search for flights from Hyderabad to Delhi,Hybrid top 20,20,5,5,1.0
+Search for flights from Hyderabad to Delhi,Neural-first top 20,20,3,5,0.6
+Compare flight fares between two cities,Neural-only top 20,20,2,4,0.5
+Compare flight fares between two cities,Neural-only top 100 coverage,100,4,4,1.0
+Compare flight fares between two cities,Hybrid top 20,20,4,4,1.0
+Compare flight fares between two cities,Neural-first top 20,20,2,4,0.5
+Find flights when the destination is flexible,Neural-only top 20,20,1,3,0.3333333333333333
+Find flights when the destination is flexible,Neural-only top 100 coverage,100,3,3,1.0
+Find flights when the destination is flexible,Hybrid top 20,20,3,3,1.0
+Find flights when the destination is flexible,Neural-first top 20,20,3,3,1.0
+Find restaurants in a given city,Neural-only top 20,20,3,3,1.0
+Find restaurants in a given city,Neural-only top 100 coverage,100,3,3,1.0
+Find restaurants in a given city,Hybrid top 20,20,3,3,1.0
+Find restaurants in a given city,Neural-first top 20,20,3,3,1.0
+Find restaurants with cuisine and price filters,Neural-only top 20,20,1,1,1.0
+Find restaurants with cuisine and price filters,Neural-only top 100 coverage,100,1,1,1.0
+Find restaurants with cuisine and price filters,Hybrid top 20,20,1,1,1.0
+Find restaurants with cuisine and price filters,Neural-first top 20,20,1,1,1.0
+Get reviews for a specific restaurant,Neural-only top 20,20,2,2,1.0
+Get reviews for a specific restaurant,Neural-only top 100 coverage,100,2,2,1.0
+Get reviews for a specific restaurant,Hybrid top 20,20,2,2,1.0
+Get reviews for a specific restaurant,Neural-first top 20,20,2,2,1.0
+Search for products by name,Neural-only top 20,20,0,8,0.0
+Search for products by name,Neural-only top 100 coverage,100,6,8,0.75
+Search for products by name,Hybrid top 20,20,7,8,0.875
+Search for products by name,Neural-first top 20,20,2,8,0.25
+Find products and compare their prices,Neural-only top 20,20,1,6,0.16666666666666666
+Find products and compare their prices,Neural-only top 100 coverage,100,4,6,0.6666666666666666
+Find products and compare their prices,Hybrid top 20,20,3,6,0.5
+Find products and compare their prices,Neural-first top 20,20,1,6,0.16666666666666666
+Track a shipment using its tracking number,Neural-only top 20,20,5,5,1.0
+Track a shipment using its tracking number,Neural-only top 100 coverage,100,5,5,1.0
+Track a shipment using its tracking number,Hybrid top 20,20,5,5,1.0
+Track a shipment using its tracking number,Neural-first top 20,20,5,5,1.0
+Find nearby places using geographic coordinates,Neural-only top 20,20,4,6,0.6666666666666666
+Find nearby places using geographic coordinates,Neural-only top 100 coverage,100,6,6,1.0
+Find nearby places using geographic coordinates,Hybrid top 20,20,5,6,0.8333333333333334
+Find nearby places using geographic coordinates,Neural-first top 20,20,4,6,0.6666666666666666
+Find available transport between two locations,Neural-only top 20,20,2,5,0.4
+Find available transport between two locations,Neural-only top 100 coverage,100,3,5,0.6
+Find available transport between two locations,Hybrid top 20,20,4,5,0.8
+Find available transport between two locations,Neural-first top 20,20,2,5,0.4

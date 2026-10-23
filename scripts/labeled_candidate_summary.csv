@@ -1,0 +1,3 @@
+﻿method,Recall_at_5,MRR_at_10,NDCG_at_10,Mean_labelled_candidates_returned
+Hybrid,0.6710034013605443,0.9,0.8674793627754087,9.8
+Neural-only,1.0,0.8,0.813746824146056,3.933333333333333

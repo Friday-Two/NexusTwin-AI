@@ -1,0 +1,16 @@
+﻿query,labeled_relevant,relevant_in_top5,recall_at_5,relevant_ids_missed_from_top5
+Search for rental cars in a city,0,0,0.0,
+Find restaurants in a given city,3,1,0.3333333333333333,"2535, 6856"
+Find products and compare their prices,6,2,0.3333333333333333,"1168, 1192, 5873, 9139"
+Search for products by name,8,3,0.375,"170, 7341, 7355, 7645, 7660"
+Find nearby places using geographic coordinates,6,3,0.5,"1722, 515, 758"
+Compare flight fares between two cities,4,2,0.5,"2515, 4325"
+Find accommodation with available rooms and prices,7,4,0.5714285714285714,"2427, 6441, 6446"
+Find hotels in Hyderabad under 3000 rupees per night,5,3,0.6,"2407, 9967"
+Search for flights from Hyderabad to Delhi,5,3,0.6,"2515, 9312"
+Get details about a specific hotel,7,5,0.7142857142857143,"2427, 8572"
+Find available transport between two locations,5,4,0.8,8330
+Find flights when the destination is flexible,3,3,1.0,
+Find restaurants with cuisine and price filters,1,1,1.0,
+Get reviews for a specific restaurant,2,2,1.0,
+Track a shipment using its tracking number,5,5,1.0,

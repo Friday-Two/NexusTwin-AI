@@ -1,0 +1,15 @@
+
+[
+  {
+    "query": "Find hotels in Hyderabad under 3000 rupees per night",
+    "relevant_api_ids": ["2452", "8576", "2407", "6446"]
+  },
+  {
+    "query": "Search for flights from Hyderabad to Delhi",
+    "relevant_api_ids": ["2472", "2455"]
+  },
+  {
+    "query": "Find restaurants near me",
+    "relevant_api_ids": ["4872", "2532", "2535"]
+  }
+]

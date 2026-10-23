@@ -1,0 +1,4 @@
+﻿method,queries,Recall_at_5,MRR_at_10,NDCG_at_10,Mean_relevant_found_at_20
+Global shortlist,14,0.6395,0.9388,0.775,4.1429
+Hybrid,14,0.6681,0.9464,0.7947,4.2857
+Neural-first,14,0.4111,0.6271,0.468,2.8571

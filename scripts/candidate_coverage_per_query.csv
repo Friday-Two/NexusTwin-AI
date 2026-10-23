@@ -1,0 +1,136 @@
+﻿query,method,k,labelled_relevant_total,relevant_found,labelled_candidate_coverage,returned_count,unique_returned_ids
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,5,5,3,0.6,5,5
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,10,5,4,0.8,10,10
+Find hotels in Hyderabad under 3000 rupees per night,Hybrid,20,5,4,0.8,20,20
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first,5,5,1,0.2,5,5
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first,10,5,1,0.2,10,10
+Find hotels in Hyderabad under 3000 rupees per night,Neural-first,20,5,2,0.4,20,20
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only,5,5,0,0.0,5,5
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only,10,5,1,0.2,10,10
+Find hotels in Hyderabad under 3000 rupees per night,Neural-only,20,5,2,0.4,20,20
+Find accommodation with available rooms and prices,Hybrid,5,7,5,0.7142857142857143,5,5
+Find accommodation with available rooms and prices,Hybrid,10,7,6,0.8571428571428571,10,10
+Find accommodation with available rooms and prices,Hybrid,20,7,7,1.0,20,20
+Find accommodation with available rooms and prices,Neural-first,5,7,0,0.0,5,5
+Find accommodation with available rooms and prices,Neural-first,10,7,1,0.14285714285714285,10,10
+Find accommodation with available rooms and prices,Neural-first,20,7,5,0.7142857142857143,20,20
+Find accommodation with available rooms and prices,Neural-only,5,7,0,0.0,5,5
+Find accommodation with available rooms and prices,Neural-only,10,7,0,0.0,10,10
+Find accommodation with available rooms and prices,Neural-only,20,7,2,0.2857142857142857,20,20
+Get details about a specific hotel,Hybrid,5,7,5,0.7142857142857143,5,5
+Get details about a specific hotel,Hybrid,10,7,7,1.0,10,10
+Get details about a specific hotel,Hybrid,20,7,7,1.0,20,20
+Get details about a specific hotel,Neural-first,5,7,4,0.5714285714285714,5,5
+Get details about a specific hotel,Neural-first,10,7,4,0.5714285714285714,10,10
+Get details about a specific hotel,Neural-first,20,7,5,0.7142857142857143,20,20
+Get details about a specific hotel,Neural-only,5,7,2,0.2857142857142857,5,5
+Get details about a specific hotel,Neural-only,10,7,4,0.5714285714285714,10,10
+Get details about a specific hotel,Neural-only,20,7,4,0.5714285714285714,20,20
+Search for flights from Hyderabad to Delhi,Hybrid,5,5,5,1.0,5,5
+Search for flights from Hyderabad to Delhi,Hybrid,10,5,5,1.0,10,10
+Search for flights from Hyderabad to Delhi,Hybrid,20,5,5,1.0,20,20
+Search for flights from Hyderabad to Delhi,Neural-first,5,5,2,0.4,5,5
+Search for flights from Hyderabad to Delhi,Neural-first,10,5,2,0.4,10,10
+Search for flights from Hyderabad to Delhi,Neural-first,20,5,3,0.6,20,20
+Search for flights from Hyderabad to Delhi,Neural-only,5,5,0,0.0,5,5
+Search for flights from Hyderabad to Delhi,Neural-only,10,5,2,0.4,10,10
+Search for flights from Hyderabad to Delhi,Neural-only,20,5,2,0.4,20,20
+Compare flight fares between two cities,Hybrid,5,4,2,0.5,5,5
+Compare flight fares between two cities,Hybrid,10,4,4,1.0,10,10
+Compare flight fares between two cities,Hybrid,20,4,4,1.0,20,20
+Compare flight fares between two cities,Neural-first,5,4,1,0.25,5,5
+Compare flight fares between two cities,Neural-first,10,4,2,0.5,10,10
+Compare flight fares between two cities,Neural-first,20,4,2,0.5,20,20
+Compare flight fares between two cities,Neural-only,5,4,0,0.0,5,5
+Compare flight fares between two cities,Neural-only,10,4,1,0.25,10,10
+Compare flight fares between two cities,Neural-only,20,4,2,0.5,20,20
+Find flights when the destination is flexible,Hybrid,5,3,3,1.0,5,5
+Find flights when the destination is flexible,Hybrid,10,3,3,1.0,10,10
+Find flights when the destination is flexible,Hybrid,20,3,3,1.0,20,20
+Find flights when the destination is flexible,Neural-first,5,3,1,0.3333333333333333,5,5
+Find flights when the destination is flexible,Neural-first,10,3,2,0.6666666666666666,10,10
+Find flights when the destination is flexible,Neural-first,20,3,3,1.0,20,20
+Find flights when the destination is flexible,Neural-only,5,3,1,0.3333333333333333,5,5
+Find flights when the destination is flexible,Neural-only,10,3,1,0.3333333333333333,10,10
+Find flights when the destination is flexible,Neural-only,20,3,1,0.3333333333333333,20,20
+Find restaurants in a given city,Hybrid,5,3,2,0.6666666666666666,5,5
+Find restaurants in a given city,Hybrid,10,3,2,0.6666666666666666,10,10
+Find restaurants in a given city,Hybrid,20,3,3,1.0,20,20
+Find restaurants in a given city,Neural-first,5,3,2,0.6666666666666666,5,5
+Find restaurants in a given city,Neural-first,10,3,3,1.0,10,10
+Find restaurants in a given city,Neural-first,20,3,3,1.0,20,20
+Find restaurants in a given city,Neural-only,5,3,2,0.6666666666666666,5,5
+Find restaurants in a given city,Neural-only,10,3,3,1.0,10,10
+Find restaurants in a given city,Neural-only,20,3,3,1.0,20,20
+Find restaurants with cuisine and price filters,Hybrid,5,1,1,1.0,5,5
+Find restaurants with cuisine and price filters,Hybrid,10,1,1,1.0,10,10
+Find restaurants with cuisine and price filters,Hybrid,20,1,1,1.0,20,20
+Find restaurants with cuisine and price filters,Neural-first,5,1,1,1.0,5,5
+Find restaurants with cuisine and price filters,Neural-first,10,1,1,1.0,10,10
+Find restaurants with cuisine and price filters,Neural-first,20,1,1,1.0,20,20
+Find restaurants with cuisine and price filters,Neural-only,5,1,1,1.0,5,5
+Find restaurants with cuisine and price filters,Neural-only,10,1,1,1.0,10,10
+Find restaurants with cuisine and price filters,Neural-only,20,1,1,1.0,20,20
+Get reviews for a specific restaurant,Hybrid,5,2,2,1.0,5,5
+Get reviews for a specific restaurant,Hybrid,10,2,2,1.0,10,10
+Get reviews for a specific restaurant,Hybrid,20,2,2,1.0,20,20
+Get reviews for a specific restaurant,Neural-first,5,2,2,1.0,5,5
+Get reviews for a specific restaurant,Neural-first,10,2,2,1.0,10,10
+Get reviews for a specific restaurant,Neural-first,20,2,2,1.0,20,20
+Get reviews for a specific restaurant,Neural-only,5,2,1,0.5,5,5
+Get reviews for a specific restaurant,Neural-only,10,2,2,1.0,10,10
+Get reviews for a specific restaurant,Neural-only,20,2,2,1.0,20,20
+Search for products by name,Hybrid,5,8,5,0.625,5,5
+Search for products by name,Hybrid,10,8,6,0.75,10,10
+Search for products by name,Hybrid,20,8,7,0.875,20,20
+Search for products by name,Neural-first,5,8,0,0.0,5,5
+Search for products by name,Neural-first,10,8,0,0.0,10,10
+Search for products by name,Neural-first,20,8,2,0.25,20,20
+Search for products by name,Neural-only,5,8,0,0.0,5,5
+Search for products by name,Neural-only,10,8,0,0.0,10,10
+Search for products by name,Neural-only,20,8,0,0.0,20,20
+Find products and compare their prices,Hybrid,5,6,1,0.16666666666666666,5,5
+Find products and compare their prices,Hybrid,10,6,1,0.16666666666666666,10,10
+Find products and compare their prices,Hybrid,20,6,3,0.5,20,20
+Find products and compare their prices,Neural-first,5,6,0,0.0,5,5
+Find products and compare their prices,Neural-first,10,6,1,0.16666666666666666,10,10
+Find products and compare their prices,Neural-first,20,6,1,0.16666666666666666,20,20
+Find products and compare their prices,Neural-only,5,6,0,0.0,5,5
+Find products and compare their prices,Neural-only,10,6,1,0.16666666666666666,10,10
+Find products and compare their prices,Neural-only,20,6,1,0.16666666666666666,20,20
+Track a shipment using its tracking number,Hybrid,5,5,5,1.0,5,5
+Track a shipment using its tracking number,Hybrid,10,5,5,1.0,10,10
+Track a shipment using its tracking number,Hybrid,20,5,5,1.0,20,20
+Track a shipment using its tracking number,Neural-first,5,5,4,0.8,5,5
+Track a shipment using its tracking number,Neural-first,10,5,5,1.0,10,10
+Track a shipment using its tracking number,Neural-first,20,5,5,1.0,20,20
+Track a shipment using its tracking number,Neural-only,5,5,3,0.6,5,5
+Track a shipment using its tracking number,Neural-only,10,5,5,1.0,10,10
+Track a shipment using its tracking number,Neural-only,20,5,5,1.0,20,20
+Find nearby places using geographic coordinates,Hybrid,5,6,1,0.16666666666666666,5,5
+Find nearby places using geographic coordinates,Hybrid,10,6,2,0.3333333333333333,10,10
+Find nearby places using geographic coordinates,Hybrid,20,6,5,0.8333333333333334,20,20
+Find nearby places using geographic coordinates,Neural-first,5,6,2,0.3333333333333333,5,5
+Find nearby places using geographic coordinates,Neural-first,10,6,3,0.5,10,10
+Find nearby places using geographic coordinates,Neural-first,20,6,4,0.6666666666666666,20,20
+Find nearby places using geographic coordinates,Neural-only,5,6,2,0.3333333333333333,5,5
+Find nearby places using geographic coordinates,Neural-only,10,6,2,0.3333333333333333,10,10
+Find nearby places using geographic coordinates,Neural-only,20,6,4,0.6666666666666666,20,20
+Search for rental cars in a city,Hybrid,5,0,0,,5,5
+Search for rental cars in a city,Hybrid,10,0,0,,10,10
+Search for rental cars in a city,Hybrid,20,0,0,,20,20
+Search for rental cars in a city,Neural-first,5,0,0,,5,5
+Search for rental cars in a city,Neural-first,10,0,0,,10,10
+Search for rental cars in a city,Neural-first,20,0,0,,20,20
+Search for rental cars in a city,Neural-only,5,0,0,,5,5
+Search for rental cars in a city,Neural-only,10,0,0,,10,10
+Search for rental cars in a city,Neural-only,20,0,0,,20,20
+Find available transport between two locations,Hybrid,5,5,1,0.2,5,5
+Find available transport between two locations,Hybrid,10,5,3,0.6,10,10
+Find available transport between two locations,Hybrid,20,5,4,0.8,20,20
+Find available transport between two locations,Neural-first,5,5,1,0.2,5,5
+Find available transport between two locations,Neural-first,10,5,2,0.4,10,10
+Find available transport between two locations,Neural-first,20,5,2,0.4,20,20
+Find available transport between two locations,Neural-only,5,5,1,0.2,5,5
+Find available transport between two locations,Neural-only,10,5,2,0.4,10,10
+Find available transport between two locations,Neural-only,20,5,2,0.4,20,20
