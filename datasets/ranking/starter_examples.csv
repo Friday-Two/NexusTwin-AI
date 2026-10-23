@@ -1,0 +1,33 @@
+query_id,preference_text,service_name,category,description,label
+q01,affordable accommodation near airport,Budget Airport Hotel,Accommodation,Low cost rooms near the airport,1
+q01,affordable accommodation near airport,Premium Gaming Laptop,Shopping,High performance laptop for gaming,0
+q02,cheap airport transfer,Airport Taxi,Transport,Low cost pickup and drop off at airport,1
+q02,cheap airport transfer,Luxury City Hotel,Accommodation,Premium hotel rooms in city center,0
+q03,student laptop under budget,Student Laptop Store,Shopping,Affordable laptops and student accessories,1
+q03,student laptop under budget,Premium City Hotel,Accommodation,Upscale rooms and concierge service,0
+q04,vegetarian food delivered,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,1
+q04,vegetarian food delivered,Train Ticket Assistance,Travel,Help planning train journeys,0
+q05,train travel planning,Train Ticket Assistance,Travel,Travel planning and train ticket assistance,1
+q05,train travel planning,Local Food Delivery,Food,Restaurant meals delivered to your location,0
+q06,comfortable premium accommodation,Premium City Hotel,Accommodation,Comfortable city hotel with premium amenities,1
+q06,comfortable premium accommodation,Budget Airport Hotel,Accommodation,Low cost rooms near the airport,0
+q07,affordable hotel for students,Student Budget Hostel,Accommodation,Low cost shared rooms for students,1
+q07,affordable hotel for students,Premium Gaming Laptop,Shopping,High performance laptop for gaming,0
+q08,ride from airport to hotel,Airport Taxi,Transport,Airport pickup and drop off transport,1
+q08,ride from airport to hotel,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,0
+q09,local restaurant meal delivery,Local Food Delivery,Food,Meals from nearby restaurants delivered,1
+q09,local restaurant meal delivery,Student Laptop Store,Shopping,Affordable laptops and student accessories,0
+q10,shopping for laptop accessories,Student Laptop Store,Shopping,Laptops and accessories for students,1
+q10,shopping for laptop accessories,Airport Taxi,Transport,Airport pickup and drop off transport,0
+q11,cheap train trip planning,Train Ticket Assistance,Travel,Help planning affordable train journeys,1
+q11,cheap train trip planning,Premium City Hotel,Accommodation,Upscale hotel rooms and concierge service,0
+q12,quiet hotel close to airport,Quiet Airport Inn,Accommodation,Quiet accommodation close to airport terminals,1
+q12,quiet hotel close to airport,Local Food Delivery,Food,Meals from nearby restaurants delivered,0
+q13,low cost transport across city,City Budget Taxi,Transport,Affordable local taxi rides around the city,1
+q13,low cost transport across city,Premium Gaming Laptop,Shopping,High performance laptop for gaming,0
+q14,healthy vegetarian lunch,Vegetarian Lunch Service,Food,Healthy vegetarian lunches delivered daily,1
+q14,healthy vegetarian lunch,Train Ticket Assistance,Travel,Help planning train journeys,0
+q15,short stay near railway station,Station Guest House,Accommodation,Affordable guest house near railway station,1
+q15,short stay near railway station,Student Laptop Store,Shopping,Laptops and accessories for students,0
+q16,help booking bus or train travel,Travel Planning Desk,Travel,Assistance planning bus and train journeys,1
+q16,help booking bus or train travel,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,0

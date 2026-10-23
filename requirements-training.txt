@@ -1,0 +1,6 @@
+# Optional dependencies for Colab/local deep-learning training only
+torch
+sentence-transformers
+pandas
+numpy
+scikit-learn
