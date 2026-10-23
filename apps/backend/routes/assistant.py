@@ -8,11 +8,14 @@ from sqlalchemy.orm import Session
 
 from apps.backend.auth_dependencies import get_current_user
 from apps.backend.dependencies import get_db
+from configs.settings import get_settings
 from core.llm.ollama_client import (
     OllamaResponseError,
     OllamaUnavailableError,
     ollama_chat_json,
 )
+from core.retrieval.geographic_reranker import rerank as geographic_rerank
+from core.retrieval.toolbench_ranker import get_retriever
 from database.models.entities import User, UserPreference
 
 router = APIRouter(prefix="/api/v1/assistant", tags=["LLM Assistant"])
@@ -81,3 +84,76 @@ def interpret_intent(
             status_code=502,
             detail="Ollama output did not match the required intent schema.",
         ) from exc
+
+
+class AssistantPlanRequest(IntentRequest):
+    top_k: int = Field(default=5, ge=1, le=10)
+
+
+class RetrievedAPICandidate(BaseModel):
+    document_id: str
+    description: str
+    api_text: str
+    ranking_score: float
+
+
+class AssistantPlanResponse(BaseModel):
+    intent_plan: IntentPlan
+    retrieved_apis: list[RetrievedAPICandidate]
+    execution_performed: bool = False
+
+
+@router.post("/plan", response_model=AssistantPlanResponse)
+def create_assistant_plan(
+    payload: AssistantPlanRequest,
+    db: Annotated[Session, Depends(get_db)],
+    current_user: Annotated[User, Depends(get_current_user)],
+) -> AssistantPlanResponse:
+    """Interpret a request and retrieve relevant API documentation.
+
+    This endpoint does not execute external APIs or perform transactions.
+    """
+    # Reuse the existing, authenticated intent interpretation logic.
+    intent_plan = interpret_intent(
+        IntentRequest(
+            message=payload.message,
+            budget_limit=payload.budget_limit,
+        ),
+        db,
+        current_user,
+    )
+
+    # Rank API documentation for the original request.
+    try:
+        geo_enabled = get_settings().enable_geo_reranking
+        candidate_k = (
+            min(20, max(payload.top_k, payload.top_k * 4))
+            if geo_enabled
+            else payload.top_k
+        )
+
+        results = get_retriever().rank(
+            payload.message,
+            top_k=candidate_k,
+        )
+
+        if geo_enabled:
+            results = geographic_rerank(payload.message, results)
+
+        results = results[: payload.top_k]
+    except FileNotFoundError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail="API retrieval model files are missing.",
+        ) from exc
+    except (ValueError, RuntimeError) as exc:
+        raise HTTPException(
+            status_code=503,
+            detail="API retrieval is temporarily unavailable.",
+        ) from exc
+
+    return AssistantPlanResponse(
+        intent_plan=intent_plan,
+        retrieved_apis=results,
+        execution_performed=False,
+    )

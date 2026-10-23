@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 30
 
     log_level: str = "INFO"
+    enable_geo_reranking: bool = False
 
     model_config = SettingsConfigDict(
         env_file=PROJECT_ROOT / ".env",

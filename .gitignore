@@ -17,3 +17,15 @@ node_modules/
 
 # Local backup files
 *.bak
+
+# Local model artifacts and checkpoints
+/models/
+/nexustwin_model_export/
+/backups/
+
+# Frontend build/cache artifacts
+/frontend/.vite/
+/frontend/tsconfig.tsbuildinfo
+
+# Temporary geographic-reranking backups
+*.geo-backup
