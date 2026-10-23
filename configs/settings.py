@@ -16,8 +16,9 @@ class Settings(BaseSettings):
 
     llm_provider: str = "ollama"
     llm_base_url: str = "http://localhost:11434/v1"
-    llm_model: str = "qwen2.5:7b-instruct"
+    llm_model: str = "llama3.2"
     llm_api_key: str = "ollama"
+    llm_timeout_seconds: int = 90
 
     jwt_secret_key: str
     jwt_algorithm: str = "HS256"
