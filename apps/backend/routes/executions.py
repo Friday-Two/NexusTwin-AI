@@ -1,9 +1,11 @@
 """Explicitly authorized simulated execution and outcome verification endpoints."""
 from typing import Annotated
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+
 from apps.backend.auth_dependencies import get_current_user
 from apps.backend.dependencies import get_db
 from core.execution.runner import execute_accepted_session, verify_execution
