@@ -22,8 +22,7 @@ class OllamaResponseError(RuntimeError):
 def ollama_chat_json(system_prompt: str, user_prompt: str) -> dict[str, Any]:
     settings = get_settings()
     base_url = settings.llm_base_url.rstrip("/")
-    if base_url.endswith("/v1"):
-        base_url = base_url[:-3]
+    base_url = base_url.removesuffix("/v1")
     endpoint = f"{base_url}/api/chat"
     payload = {
         "model": settings.llm_model,
