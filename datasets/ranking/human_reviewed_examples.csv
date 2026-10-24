@@ -1,0 +1,7 @@
+query_id,preference_text,service_name,category,description,label,label_source
+q01,affordable accommodation near airport,Budget Airport Hotel,Accommodation,Low cost rooms near the airport,1,human_review
+q01,affordable accommodation near airport,Premium Gaming Laptop,Shopping,High performance laptop for gaming,0,human_review
+q02,cheap airport transfer,Airport Taxi,Transport,Low cost pickup and drop off at airport,1,human_review
+q02,cheap airport transfer,Luxury City Hotel,Accommodation,Premium hotel rooms in city center,0,human_review
+q03,student laptop under budget,Student Laptop Store,Shopping,Affordable laptops and student accessories,1,human_review
+q03,student laptop under budget,Premium City Hotel,Accommodation,Upscale rooms and concierge service,0,human_review

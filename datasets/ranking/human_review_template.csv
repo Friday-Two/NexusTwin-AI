@@ -1,0 +1,262 @@
+query_id,preference_text,service_name,category,description,label,label_source,review_status
+q01,affordable accommodation near airport,Budget Airport Hotel,Accommodation,Low cost rooms near the airport,,,pending
+q01,affordable accommodation near airport,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q02,cheap airport transfer,Airport Taxi,Transport,Low cost pickup and drop off at airport,,,pending
+q02,cheap airport transfer,Luxury City Hotel,Accommodation,Premium hotel rooms in city center,,,pending
+q03,student laptop under budget,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q03,student laptop under budget,Premium City Hotel,Accommodation,Upscale rooms and concierge service,,,pending
+q04,vegetarian food delivered,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,,,pending
+q04,vegetarian food delivered,Train Ticket Assistance,Travel,Help planning train journeys,,,pending
+q05,train travel planning,Train Ticket Assistance,Travel,Travel planning and train ticket assistance,,,pending
+q05,train travel planning,Local Food Delivery,Food,Restaurant meals delivered to your location,,,pending
+q06,comfortable premium accommodation,Premium City Hotel,Accommodation,Comfortable city hotel with premium amenities,,,pending
+q06,comfortable premium accommodation,Budget Airport Hotel,Accommodation,Low cost rooms near the airport,,,pending
+q07,affordable hotel for students,Student Budget Hostel,Accommodation,Low cost shared rooms for students,,,pending
+q07,affordable hotel for students,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q08,ride from airport to hotel,Airport Taxi,Transport,Airport pickup and drop off transport,,,pending
+q08,ride from airport to hotel,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,,,pending
+q09,local restaurant meal delivery,Local Food Delivery,Food,Meals from nearby restaurants delivered,,,pending
+q09,local restaurant meal delivery,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q10,shopping for laptop accessories,Student Laptop Store,Shopping,Laptops and accessories for students,,,pending
+q10,shopping for laptop accessories,Airport Taxi,Transport,Airport pickup and drop off transport,,,pending
+q11,cheap train trip planning,Train Ticket Assistance,Travel,Help planning affordable train journeys,,,pending
+q11,cheap train trip planning,Premium City Hotel,Accommodation,Upscale hotel rooms and concierge service,,,pending
+q12,quiet hotel close to airport,Quiet Airport Inn,Accommodation,Quiet accommodation close to airport terminals,,,pending
+q12,quiet hotel close to airport,Local Food Delivery,Food,Meals from nearby restaurants delivered,,,pending
+q13,low cost transport across city,City Budget Taxi,Transport,Affordable local taxi rides around the city,,,pending
+q13,low cost transport across city,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q14,healthy vegetarian lunch,Vegetarian Lunch Service,Food,Healthy vegetarian lunches delivered daily,,,pending
+q14,healthy vegetarian lunch,Train Ticket Assistance,Travel,Help planning train journeys,,,pending
+q15,short stay near railway station,Station Guest House,Accommodation,Affordable guest house near railway station,,,pending
+q15,short stay near railway station,Student Laptop Store,Shopping,Laptops and accessories for students,,,pending
+q16,help booking bus or train travel,Travel Planning Desk,Travel,Assistance planning bus and train journeys,,,pending
+q16,help booking bus or train travel,Vegetarian Meal Delivery,Food,Vegetarian meals delivered from local restaurants,,,pending
+q01,affordable accommodation near airport,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q01,affordable accommodation near airport,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q01,affordable accommodation near airport,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q01,affordable accommodation near airport,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q01,affordable accommodation near airport,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q01,affordable accommodation near airport,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q01,affordable accommodation near airport,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q01,affordable accommodation near airport,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q01,affordable accommodation near airport,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q01,affordable accommodation near airport,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q01,affordable accommodation near airport,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q01,affordable accommodation near airport,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q01,affordable accommodation near airport,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q01,affordable accommodation near airport,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q01,affordable accommodation near airport,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q02,cheap airport transfer,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q02,cheap airport transfer,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q02,cheap airport transfer,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q02,cheap airport transfer,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q02,cheap airport transfer,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q02,cheap airport transfer,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q02,cheap airport transfer,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q02,cheap airport transfer,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q02,cheap airport transfer,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q02,cheap airport transfer,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q02,cheap airport transfer,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q02,cheap airport transfer,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q02,cheap airport transfer,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q02,cheap airport transfer,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q03,student laptop under budget,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q03,student laptop under budget,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q03,student laptop under budget,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q03,student laptop under budget,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q03,student laptop under budget,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q03,student laptop under budget,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q03,student laptop under budget,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q03,student laptop under budget,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q03,student laptop under budget,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q03,student laptop under budget,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q03,student laptop under budget,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q03,student laptop under budget,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q03,student laptop under budget,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q03,student laptop under budget,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q03,student laptop under budget,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q04,vegetarian food delivered,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q04,vegetarian food delivered,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q04,vegetarian food delivered,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q04,vegetarian food delivered,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q04,vegetarian food delivered,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q04,vegetarian food delivered,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q04,vegetarian food delivered,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q04,vegetarian food delivered,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q04,vegetarian food delivered,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q04,vegetarian food delivered,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q04,vegetarian food delivered,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q04,vegetarian food delivered,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q04,vegetarian food delivered,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q04,vegetarian food delivered,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q05,train travel planning,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q05,train travel planning,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q05,train travel planning,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q05,train travel planning,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q05,train travel planning,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q05,train travel planning,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q05,train travel planning,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q05,train travel planning,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q05,train travel planning,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q05,train travel planning,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q05,train travel planning,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q05,train travel planning,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q05,train travel planning,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q05,train travel planning,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q06,comfortable premium accommodation,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q06,comfortable premium accommodation,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q06,comfortable premium accommodation,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q06,comfortable premium accommodation,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q06,comfortable premium accommodation,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q06,comfortable premium accommodation,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q06,comfortable premium accommodation,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q06,comfortable premium accommodation,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q06,comfortable premium accommodation,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q06,comfortable premium accommodation,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q06,comfortable premium accommodation,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q06,comfortable premium accommodation,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q06,comfortable premium accommodation,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q06,comfortable premium accommodation,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q06,comfortable premium accommodation,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q06,comfortable premium accommodation,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q07,affordable hotel for students,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q07,affordable hotel for students,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q07,affordable hotel for students,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q07,affordable hotel for students,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q07,affordable hotel for students,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q07,affordable hotel for students,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q07,affordable hotel for students,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q07,affordable hotel for students,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q07,affordable hotel for students,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q07,affordable hotel for students,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q07,affordable hotel for students,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q07,affordable hotel for students,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q07,affordable hotel for students,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q07,affordable hotel for students,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q08,ride from airport to hotel,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q08,ride from airport to hotel,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q08,ride from airport to hotel,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q08,ride from airport to hotel,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q08,ride from airport to hotel,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q08,ride from airport to hotel,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q08,ride from airport to hotel,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q08,ride from airport to hotel,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q08,ride from airport to hotel,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q08,ride from airport to hotel,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q08,ride from airport to hotel,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q08,ride from airport to hotel,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q08,ride from airport to hotel,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q08,ride from airport to hotel,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q09,local restaurant meal delivery,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q09,local restaurant meal delivery,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q09,local restaurant meal delivery,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q09,local restaurant meal delivery,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q09,local restaurant meal delivery,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q09,local restaurant meal delivery,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q09,local restaurant meal delivery,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q09,local restaurant meal delivery,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q09,local restaurant meal delivery,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q09,local restaurant meal delivery,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q09,local restaurant meal delivery,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q09,local restaurant meal delivery,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q09,local restaurant meal delivery,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q09,local restaurant meal delivery,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q10,shopping for laptop accessories,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q10,shopping for laptop accessories,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q10,shopping for laptop accessories,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q10,shopping for laptop accessories,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q10,shopping for laptop accessories,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q10,shopping for laptop accessories,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q10,shopping for laptop accessories,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q10,shopping for laptop accessories,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q10,shopping for laptop accessories,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q10,shopping for laptop accessories,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q10,shopping for laptop accessories,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q10,shopping for laptop accessories,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q10,shopping for laptop accessories,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q10,shopping for laptop accessories,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q11,cheap train trip planning,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q11,cheap train trip planning,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q11,cheap train trip planning,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q11,cheap train trip planning,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q11,cheap train trip planning,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q11,cheap train trip planning,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q11,cheap train trip planning,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q11,cheap train trip planning,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q11,cheap train trip planning,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q11,cheap train trip planning,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q11,cheap train trip planning,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q11,cheap train trip planning,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q11,cheap train trip planning,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q11,cheap train trip planning,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q11,cheap train trip planning,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q12,quiet hotel close to airport,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q12,quiet hotel close to airport,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q12,quiet hotel close to airport,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q12,quiet hotel close to airport,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q12,quiet hotel close to airport,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q12,quiet hotel close to airport,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q12,quiet hotel close to airport,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q12,quiet hotel close to airport,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q12,quiet hotel close to airport,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q12,quiet hotel close to airport,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q12,quiet hotel close to airport,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q12,quiet hotel close to airport,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q12,quiet hotel close to airport,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q12,quiet hotel close to airport,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q13,low cost transport across city,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q13,low cost transport across city,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q13,low cost transport across city,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q13,low cost transport across city,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q13,low cost transport across city,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q13,low cost transport across city,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q13,low cost transport across city,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q13,low cost transport across city,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q13,low cost transport across city,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q13,low cost transport across city,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q13,low cost transport across city,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q13,low cost transport across city,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q13,low cost transport across city,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q13,low cost transport across city,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q14,healthy vegetarian lunch,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q14,healthy vegetarian lunch,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q14,healthy vegetarian lunch,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q14,healthy vegetarian lunch,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q14,healthy vegetarian lunch,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q14,healthy vegetarian lunch,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q14,healthy vegetarian lunch,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q14,healthy vegetarian lunch,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q14,healthy vegetarian lunch,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q14,healthy vegetarian lunch,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q14,healthy vegetarian lunch,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q14,healthy vegetarian lunch,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q14,healthy vegetarian lunch,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q14,healthy vegetarian lunch,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q15,short stay near railway station,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q15,short stay near railway station,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q15,short stay near railway station,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q15,short stay near railway station,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q15,short stay near railway station,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q15,short stay near railway station,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q15,short stay near railway station,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q15,short stay near railway station,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q15,short stay near railway station,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q15,short stay near railway station,Vegetarian Meal Delivery,Food,Vegetarian meals delivered to your location,,,pending
+q15,short stay near railway station,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q15,short stay near railway station,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q15,short stay near railway station,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
+q15,short stay near railway station,Travel Planning Desk,Travel,Help planning bus and train journeys,,,pending
+q16,help booking bus or train travel,Quiet Airport Inn,Accommodation,Quiet rooms close to the airport,,,pending
+q16,help booking bus or train travel,Student Budget Hostel,Accommodation,Affordable hostel stays for students,,,pending
+q16,help booking bus or train travel,Station Guest House,Accommodation,Short stays near the railway station,,,pending
+q16,help booking bus or train travel,Luxury City Hotel,Accommodation,Premium rooms in the city center,,,pending
+q16,help booking bus or train travel,Budget Family Lodge,Accommodation,Low cost accommodation for families,,,pending
+q16,help booking bus or train travel,Student Laptop Store,Shopping,Affordable laptops and student accessories,,,pending
+q16,help booking bus or train travel,Premium Gaming Laptop,Shopping,High performance laptop for gaming,,,pending
+q16,help booking bus or train travel,Laptop Accessory Shop,Shopping,"Laptop bags, chargers, keyboards and accessories",,,pending
+q16,help booking bus or train travel,Airport Taxi,Transport,Low cost pickup and drop off at the airport,,,pending
+q16,help booking bus or train travel,City Budget Taxi,Transport,Affordable rides across the city,,,pending
+q16,help booking bus or train travel,Intercity Bus Service,Transport,Bus travel between nearby cities,,,pending
+q16,help booking bus or train travel,Vegetarian Lunch Service,Food,Healthy vegetarian lunch options,,,pending
+q16,help booking bus or train travel,Local Food Delivery,Food,Restaurant meals delivered locally,,,pending
+q16,help booking bus or train travel,Train Ticket Assistance,Travel,Help finding and booking train tickets,,,pending
