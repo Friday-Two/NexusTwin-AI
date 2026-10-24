@@ -10,6 +10,38 @@ type IntentPlan = { intent: string; category: string; constraints: string[]; mis
 type RetrievedAPI = { document_id: string; description: string; api_text: string; ranking_score: number };
 type RetrievalResponse = { query: string; results: RetrievedAPI[] };
 
+type APIParameter = { name?: string; type?: string; description?: string; default?: unknown };
+type APIInfo = {
+  api_name?: string;
+  api_description?: string;
+  tool_name?: string;
+  category_name?: string;
+  method?: string;
+  required_parameters?: APIParameter[];
+  optional_parameters?: APIParameter[];
+};
+
+function getAPIInfo(item: RetrievedAPI): APIInfo {
+  try {
+    const parsed: unknown = JSON.parse(item.description);
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      return parsed as APIInfo;
+    }
+  } catch {
+    // Some corpus rows contain plain-text descriptions instead of JSON metadata.
+  }
+  return {
+    api_name: item.description || 'API capability',
+    api_description: item.api_text || 'No description available.',
+  };
+}
+
+function conciseText(value: string, limit = 180): string {
+  const clean = value.replace(/<[^>]*>/g, ' ').replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, '')
+    .replace(/\\s+/g, ' ').trim();
+  return clean.length > limit ? clean.slice(0, limit).trimEnd() + '…' : clean;
+}
+
 const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
 export default function App() {
@@ -33,7 +65,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [intentMessage, setIntentMessage] = useState('Find affordable accommodation near the airport');
   const [intentPlan, setIntentPlan] = useState<IntentPlan | null>(null);
-  const [retrievalQuery, setRetrievalQuery] = useState('Find rental cars in a city');
+  const [retrievalQuery, setRetrievalQuery] = useState('Search for hotel availability by location');
   const [retrievalResults, setRetrievalResults] = useState<RetrievedAPI[]>([]);
   const [retrievalBusy, setRetrievalBusy] = useState(false);
   const [retrievalSearched, setRetrievalSearched] = useState(false);
@@ -273,20 +305,47 @@ export default function App() {
         </form>
 
         <div className="service-list">
-          {retrievalResults.map((item, index) => (
-            <article className="service-row" key={item.document_id}>
-              <div className="service-symbol">{String(index + 1).padStart(2, '0')}</div>
-              <div className="service-copy">
-                <div className="service-title">{item.description || 'API documentation'}</div>
-                <p>{item.api_text || 'No API details available.'}</p>
-                <small>Document ID: {item.document_id}</small>
-              </div>
-              <div className="relevance">
-                <small>RANKING SCORE</small>
-                <strong>{item.ranking_score.toFixed(4)}</strong>
-              </div>
-            </article>
-          ))}
+          {retrievalResults.map((item, index) => {
+            const info = getAPIInfo(item);
+            const required = info.required_parameters ?? [];
+            const optional = info.optional_parameters ?? [];
+            const provider = info.tool_name || info.category_name || 'API provider';
+            const description = conciseText(
+              info.api_description || item.api_text || 'Documentation found for this capability.'
+            );
+            const parameterNames = required
+              .map(parameter => parameter.name)
+              .filter((name): name is string => Boolean(name));
+
+            return (
+              <article className="service-row api-result" key={item.document_id}>
+                <div className="service-symbol">{String(index + 1).padStart(2, '0')}</div>
+                <div className="service-copy">
+                  <div className="service-title">
+                    {info.api_name || 'Matching API capability'}
+                    <span className="category-tag">{provider}</span>
+                  </div>
+                  <p>{description}</p>
+                  <p className="api-purpose">
+                    {parameterNames.length
+                      ? `Can be configured with: ${parameterNames.slice(0, 4).join(', ')}${parameterNames.length > 4 ? ', and more' : ''}.`
+                      : 'Open technical details to review the documented inputs.'}
+                  </p>
+                  <details className="api-technical">
+                    <summary>Technical details</summary>
+                    <div className="api-technical-grid">
+                      <span>Request method</span><strong>{info.method || 'Not specified'}</strong>
+                      <span>Provider / category</span><strong>{provider}</strong>
+                      <span>Required inputs</span><strong>{parameterNames.length ? parameterNames.join(', ') : 'Not specified'}</strong>
+                      <span>Optional inputs</span><strong>{optional.length ? optional.map(p => p.name).filter(Boolean).join(', ') : 'None listed'}</strong>
+                      <span>Document reference</span><strong>{item.document_id}</strong>
+                      <span>Model ranking score</span><strong>{item.ranking_score.toFixed(4)} (not a probability)</strong>
+                    </div>
+                  </details>
+                </div>
+              </article>
+            );
+          })}
 
           {retrievalResults.length === 0 && (
             <div className="empty">
