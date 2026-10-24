@@ -37,8 +37,7 @@ function getAPIInfo(item: RetrievedAPI): APIInfo {
 }
 
 function conciseText(value: string, limit = 180): string {
-  const clean = value.replace(/<[^>]*>/g, ' ').replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, '')
-    .replace(/\\s+/g, ' ').trim();
+  const clean = value.replace(/<[^>]*>/g, ' ').replace(/\\s+/g, ' ').trim();
   return clean.length > limit ? clean.slice(0, limit).trimEnd() + '…' : clean;
 }
 
