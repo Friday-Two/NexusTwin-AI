@@ -1,5 +1,6 @@
 ﻿import csv
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,11 +15,9 @@ def validate(path):
             "category", "description", "label",
             "label_source", "review_status",
         }
-
         missing = required - set(reader.fieldnames or [])
         if missing:
             raise ValueError(f"Missing columns: {sorted(missing)}")
-
         rows = list(reader)
 
     if not rows:
@@ -26,9 +25,13 @@ def validate(path):
 
     errors = []
     seen = set()
+    query_texts = defaultdict(set)
+    query_labels = defaultdict(list)
 
     for line, row in enumerate(rows, start=2):
-        key = (row["query_id"], row["service_name"])
+        query_id = row["query_id"].strip()
+        service = row["service_name"].strip()
+        key = (query_id, service)
 
         if not all(row.get(c, "").strip() for c in (
             "query_id", "preference_text", "service_name",
@@ -40,6 +43,7 @@ def validate(path):
             errors.append(f"Line {line}: duplicate query/service pair {key}.")
         seen.add(key)
 
+        query_texts[query_id].add(row["preference_text"].strip())
         label = row["label"].strip()
         status = row["review_status"].strip().lower()
         source = row["label_source"].strip()
@@ -51,9 +55,7 @@ def validate(path):
                 )
         elif status == "reviewed":
             if label not in {"0", "1"}:
-                errors.append(
-                    f"Line {line}: reviewed label must be 0 or 1."
-                )
+                errors.append(f"Line {line}: reviewed label must be 0 or 1.")
             if source != "human_review":
                 errors.append(
                     f"Line {line}: reviewed row needs label_source=human_review."
@@ -62,6 +64,13 @@ def validate(path):
             errors.append(
                 f"Line {line}: review_status must be pending or reviewed."
             )
+
+        if status == "reviewed" and label in {"0", "1"}:
+            query_labels[query_id].append(label)
+
+    for query_id, texts in query_texts.items():
+        if len(texts) > 1:
+            errors.append(f"{query_id}: inconsistent preference text.")
 
     if errors:
         print(f"Validation failed: {len(errors)} issue(s)")
@@ -75,10 +84,18 @@ def validate(path):
         row["review_status"].strip().lower() == "reviewed"
         for row in rows
     )
+    pending = len(rows) - reviewed
+    complete_queries = sum(
+        "0" in labels and "1" in labels
+        for labels in query_labels.values()
+    )
+
     print("Validation passed.")
     print(f"Total rows: {len(rows)}")
     print(f"Reviewed: {reviewed}")
-    print(f"Pending: {len(rows) - reviewed}")
+    print(f"Pending: {pending}")
+    print(f"Queries with reviewed positive and negative labels: {complete_queries}")
+    print("Note: structural validation does not establish label quality.")
     return True
 
 
