@@ -10,6 +10,38 @@ type IntentPlan = { intent: string; category: string; constraints: string[]; mis
 type RetrievedAPI = { document_id: string; description: string; api_text: string; ranking_score: number };
 type RetrievalResponse = { query: string; results: RetrievedAPI[] };
 
+type APIParameter = { name?: string };
+
+type APIInfo = {
+  api_name?: string;
+  api_description?: string;
+  tool_name?: string;
+  category_name?: string;
+  required_parameters?: APIParameter[];
+  method?: string;
+};
+
+function getAPIInfo(item: RetrievedAPI): APIInfo {
+  try {
+    const parsed = JSON.parse(item.description);
+    if (parsed && typeof parsed === 'object') return parsed as APIInfo;
+  } catch {
+    // The description may be plain text.
+  }
+
+  return {
+    api_name: item.description || 'API Documentation',
+    api_description: item.api_text || 'No description available.',
+  };
+}
+
+function shortDescription(text: string, maxLength = 140): string {
+  const clean = text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  return clean.length > maxLength
+    ? clean.slice(0, maxLength).trimEnd() + '…'
+    : clean;
+}
+
 const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
 export default function App() {
@@ -273,20 +305,51 @@ export default function App() {
         </form>
 
         <div className="service-list">
-          {retrievalResults.map((item, index) => (
-            <article className="service-row" key={item.document_id}>
-              <div className="service-symbol">{String(index + 1).padStart(2, '0')}</div>
-              <div className="service-copy">
-                <div className="service-title">{item.description || 'API documentation'}</div>
-                <p>{item.api_text || 'No API details available.'}</p>
-                <small>Document ID: {item.document_id}</small>
-              </div>
-              <div className="relevance">
-                <small>RANKING SCORE</small>
-                <strong>{item.ranking_score.toFixed(4)}</strong>
-              </div>
-            </article>
-          ))}
+          {retrievalResults.map((item, index) => {
+            const info = getAPIInfo(item);
+            const parameters = info.required_parameters
+              ?.map(p => p.name)
+              .filter((name): name is string => Boolean(name)) ?? [];
+
+            return (
+              <article className="service-row" key={item.document_id}>
+                <div className="service-symbol">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+                <div className="service-copy">
+                  <div className="service-title">
+                    {info.api_name || 'API Documentation'}
+                    <span className="category-tag">
+                      {info.tool_name || info.category_name || 'API'}
+                    </span>
+                  </div>
+
+                  <p>
+                    {shortDescription(
+                      info.api_description || item.api_text || ''
+                    )}
+                  </p>
+
+                  <small>
+                    Required: {parameters.length
+                      ? parameters.slice(0, 5).join(', ') +
+                        (parameters.length > 5 ? ', …' : '')
+                      : 'Not specified'}
+                  </small>
+                  <br />
+                  <small>Document ID: {item.document_id}</small>
+                </div>
+
+                <div className="relevance">
+                  <small>
+                    {info.method || 'API'} · RANKING SCORE
+                  </small>
+                  <strong>{item.ranking_score.toFixed(4)}</strong>
+                </div>
+              </article>
+            );
+          })}
 
           {retrievalResults.length === 0 && (
             <div className="empty">
