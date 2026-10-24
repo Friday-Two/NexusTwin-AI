@@ -1,4 +1,5 @@
-
+import logging
+import os
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, Query
@@ -8,8 +9,10 @@ from sqlalchemy.orm import Session
 from apps.backend.auth_dependencies import get_current_user
 from apps.backend.dependencies import get_db
 from apps.backend.schemas import RankedServiceRead
-from core.negotiation.service_ranker import rank_services
+from core.negotiation.preference_ml_ranker import rank_services_with_fallback
 from database.models.entities import Service, User, UserPreference
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/v1/services", tags=["Service Discovery"])
 
@@ -54,7 +57,21 @@ def discover_services(
         ).all()
     )
 
-    ranked = rank_services(services, preferences)[:limit]
+    use_ml = (
+        os.getenv("NEXUSTWIN_PREFERENCE_ML_ENABLED", "false")
+        .strip()
+        .lower()
+        in {"1", "true", "yes", "on"}
+    )
+
+    if use_ml:
+        logger.info("Experimental preference ML ranking is enabled")
+
+    ranked = rank_services_with_fallback(
+        services,
+        preferences,
+        use_ml=use_ml,
+    )[:limit]
 
     return [
         {
