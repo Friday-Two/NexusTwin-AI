@@ -10,36 +10,35 @@ type IntentPlan = { intent: string; category: string; constraints: string[]; mis
 type RetrievedAPI = { document_id: string; description: string; api_text: string; ranking_score: number };
 type RetrievalResponse = { query: string; results: RetrievedAPI[] };
 
-type APIParameter = { name?: string };
-
+type APIParameter = { name?: string; type?: string; description?: string; default?: unknown };
 type APIInfo = {
   api_name?: string;
   api_description?: string;
   tool_name?: string;
   category_name?: string;
-  required_parameters?: APIParameter[];
   method?: string;
+  required_parameters?: APIParameter[];
+  optional_parameters?: APIParameter[];
 };
 
 function getAPIInfo(item: RetrievedAPI): APIInfo {
   try {
-    const parsed = JSON.parse(item.description);
-    if (parsed && typeof parsed === 'object') return parsed as APIInfo;
+    const parsed: unknown = JSON.parse(item.description);
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      return parsed as APIInfo;
+    }
   } catch {
-    // The description may be plain text.
+    // Some corpus rows contain plain-text descriptions instead of JSON metadata.
   }
-
   return {
-    api_name: item.description || 'API Documentation',
+    api_name: item.description || 'API capability',
     api_description: item.api_text || 'No description available.',
   };
 }
 
-function shortDescription(text: string, maxLength = 140): string {
-  const clean = text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  return clean.length > maxLength
-    ? clean.slice(0, maxLength).trimEnd() + '…'
-    : clean;
+function conciseText(value: string, limit = 180): string {
+  const clean = value.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  return clean.length > limit ? clean.slice(0, limit).trimEnd() + '…' : clean;
 }
 
 const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
@@ -65,7 +64,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [intentMessage, setIntentMessage] = useState('Find affordable accommodation near the airport');
   const [intentPlan, setIntentPlan] = useState<IntentPlan | null>(null);
-  const [retrievalQuery, setRetrievalQuery] = useState('Find rental cars in a city');
+  const [retrievalQuery, setRetrievalQuery] = useState('Search for hotel availability by location');
   const [retrievalResults, setRetrievalResults] = useState<RetrievedAPI[]>([]);
   const [retrievalBusy, setRetrievalBusy] = useState(false);
   const [retrievalSearched, setRetrievalSearched] = useState(false);
@@ -307,45 +306,41 @@ export default function App() {
         <div className="service-list">
           {retrievalResults.map((item, index) => {
             const info = getAPIInfo(item);
-            const parameters = info.required_parameters
-              ?.map(p => p.name)
-              .filter((name): name is string => Boolean(name)) ?? [];
+            const required = info.required_parameters ?? [];
+            const optional = info.optional_parameters ?? [];
+            const provider = info.tool_name || info.category_name || 'API provider';
+            const description = conciseText(
+              info.api_description || item.api_text || 'Documentation found for this capability.'
+            );
+            const parameterNames = required
+              .map(parameter => parameter.name)
+              .filter((name): name is string => Boolean(name));
 
             return (
-              <article className="service-row" key={item.document_id}>
-                <div className="service-symbol">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-
+              <article className="service-row api-result" key={item.document_id}>
+                <div className="service-symbol">{String(index + 1).padStart(2, '0')}</div>
                 <div className="service-copy">
                   <div className="service-title">
-                    {info.api_name || 'API Documentation'}
-                    <span className="category-tag">
-                      {info.tool_name || info.category_name || 'API'}
-                    </span>
+                    {info.api_name || 'Matching API capability'}
+                    <span className="category-tag">{provider}</span>
                   </div>
-
-                  <p>
-                    {shortDescription(
-                      info.api_description || item.api_text || ''
-                    )}
+                  <p>{description}</p>
+                  <p className="api-purpose">
+                    {parameterNames.length
+                      ? `Can be configured with: ${parameterNames.slice(0, 4).join(', ')}${parameterNames.length > 4 ? ', and more' : ''}.`
+                      : 'Open technical details to review the documented inputs.'}
                   </p>
-
-                  <small>
-                    Required: {parameters.length
-                      ? parameters.slice(0, 5).join(', ') +
-                        (parameters.length > 5 ? ', …' : '')
-                      : 'Not specified'}
-                  </small>
-                  <br />
-                  <small>Document ID: {item.document_id}</small>
-                </div>
-
-                <div className="relevance">
-                  <small>
-                    {info.method || 'API'} · RANKING SCORE
-                  </small>
-                  <strong>{item.ranking_score.toFixed(4)}</strong>
+                  <details className="api-technical">
+                    <summary>Technical details</summary>
+                    <div className="api-technical-grid">
+                      <span>Request method</span><strong>{info.method || 'Not specified'}</strong>
+                      <span>Provider / category</span><strong>{provider}</strong>
+                      <span>Required inputs</span><strong>{parameterNames.length ? parameterNames.join(', ') : 'Not specified'}</strong>
+                      <span>Optional inputs</span><strong>{optional.length ? optional.map(p => p.name).filter(Boolean).join(', ') : 'None listed'}</strong>
+                      <span>Document reference</span><strong>{item.document_id}</strong>
+                      <span>Model ranking score</span><strong>{item.ranking_score.toFixed(4)} (not a probability)</strong>
+                    </div>
+                  </details>
                 </div>
               </article>
             );
